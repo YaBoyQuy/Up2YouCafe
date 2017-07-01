@@ -1,0 +1,7 @@
+<h1>Quy is the best</h1>
+
+<%= link_to 'Contact Page', contacts_path %>
+
+<% @contacts.each do |contact| %>
+  <h5>Name: <%= contact.name %>, Number: <%= contact.phone_number %></h5>
+<% end %>
