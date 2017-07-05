@@ -1,8 +1,26 @@
 Rails.application.routes.draw do
 
   root 'home#index'
+
   get '/contacts' => 'contacts#index', as: 'contacts'
+
+  get '/contacts/new' => 'contacts#new', as: 'new_contacts'
   post '/contacts' => 'contacts#create', as: 'create_contacts'
+
+  get '/contacts/:id/edit_contact' => 'contacts#edit', as: 'edit_contact'
+  patch '/contacts/:id' => 'contacts#update', as: 'contact'
+
+  delete '/contacts/:id/delete_contact' => 'contacts#delete', as:'delete_contact'
+
+  get '/products' => 'products#index', as: 'products'
+
+  get '/products/new' => 'products#new', as: 'new_products'
+  post '/products' => 'products#create', as: 'create_products'
+
+  get '/products/:id/edit' => 'products#edit', as: 'edit_product'
+  patch '/products/:id' => 'products#update', as: 'product'
+
+  delete '/products/:id/delete' => 'products#delete', as:'delete_product'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,12 @@
+<h1> Edit product form </h1>
+
+<%= form_for(@product) do |product_form| %>
+  <label>Name</label>
+  <%= product_form.text_field :name %>
+  <br/>
+  <br/>
+  <label>Price</label>
+  <%= product_form.text_field :price %>
+  <br/>
+  <%= product_form.submit 'Update!' %>
+<% end %>

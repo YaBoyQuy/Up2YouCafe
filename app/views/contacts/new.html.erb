@@ -1,0 +1,17 @@
+<h2>New Contact</h2>
+
+<%= form_for(@contact) do |contact_form| %>
+  <label>Name</label>
+  <%= contact_form.text_field :name %>
+  <br/>
+  <br/>
+  <label>Email</label>
+  <%= contact_form.text_field :email %>
+  <br/>
+  <br/>
+  <label>Phone Number</label>
+  <%= contact_form.text_field :phone_number %>
+  <br/>
+  <br/>
+  <%= contact_form.submit 'Save!' %>
+<% end %>
